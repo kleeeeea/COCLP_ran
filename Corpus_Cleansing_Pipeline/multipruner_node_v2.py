@@ -288,16 +288,6 @@ def process_all_files(input_dir, output_dir, pruner, num_processes=None,
                             min_text_length=min_text_length)
         list(tqdm(pool.imap(process_func, jsonl_files), total=len(jsonl_files), desc=f"Pruning files"))
 
-    # for jsonl_file in jsonl_files:
-    #     process_single_file(jsonl_file, pruner, output_path=output_dir,
-    #                         enable_markdown=enable_markdown, enable_email=enable_email, enable_link=enable_link,
-    #                         enable_ip=enable_ip, enable_control_char=enable_control_char,
-    #                         enable_repeat_space=enable_repeat_space, enable_punctuation_clip=enable_punctuation_clip,
-    #                         enable_text_circled=enable_text_circled, enable_filename=enable_filename,
-    #                         enable_repeat_char=enable_repeat_char, enable_html=enable_html,
-    #                         enable_answer_sheet_filter=enable_answer_sheet_filter,
-    #                         min_text_length=min_text_length)
-
     print(f"处理完成。结果保存至 {output_dir}")
 
 
