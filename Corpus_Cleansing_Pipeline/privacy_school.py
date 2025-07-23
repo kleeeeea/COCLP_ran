@@ -166,11 +166,3 @@ class AnonymizeSchoolNamesNode:
 
         return (str(output_path),)
 
-
-NODE_CLASS_MAPPINGS=({
-    "AnonymizeSchoolNamesNode": AnonymizeSchoolNamesNode
-})
-
-NODE_DISPLAY_NAME_MAPPINGS=({
-    "AnonymizeSchoolNamesNode": "Anonymize School Names Node"
-})
