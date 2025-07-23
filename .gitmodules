@@ -1,0 +1,12 @@
+[submodule "Comfyui-LG_GroupExecutor"]
+	path = Comfyui-LG_GroupExecutor
+	url = https://github.com/LAOGOU-666/Comfyui-LG_GroupExecutor.git
+[submodule "ComfyUI-to-Python-Extension"]
+	path = ComfyUI-to-Python-Extension
+	url = https://github.com/pydn/ComfyUI-to-Python-Extension.git
+[submodule "rgthree-comfy"]
+	path = rgthree-comfy
+	url = https://github.com/rgthree/rgthree-comfy.git
+[submodule "Corpus_Cleansing_Pipeline/MinerU"]
+	path = Corpus_Cleansing_Pipeline/MinerU
+	url = https://github.com/opendatalab/MinerU.git

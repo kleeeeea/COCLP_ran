@@ -1,0 +1,13 @@
+jsonlines
+markitdown[all]==0.1.1
+scikit-learn
+transformers 
+datasets 
+torch
+rarfile
+py7zr
+librosa
+opencc
+webrtcvad
+faster_whisper
+resampy

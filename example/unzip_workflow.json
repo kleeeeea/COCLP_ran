@@ -1,0 +1,281 @@
+{
+  "id": "c195d16d-9b72-4126-879c-7de1ba8cbb36",
+  "revision": 0,
+  "last_node_id": 6,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "GroupExecutorSingle",
+      "pos": [
+        380.9530029296875,
+        -254.04312133789062
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "signal",
+          "shape": 7,
+          "type": "SIGNAL",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGNAL",
+          "type": "SIGNAL",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GroupExecutorSingle"
+      },
+      "widgets_values": [
+        "文件分类",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "GroupExecutorSender",
+      "pos": [
+        746.2864990234375,
+        -238.04324340820312
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "signal",
+          "type": "SIGNAL",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "isExecuting": false,
+        "isCancelling": false,
+        "statusText": "",
+        "showStatus": false
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 5,
+      "type": "GroupExecutorSingle",
+      "pos": [
+        -10.1580810546875,
+        -247.82098388671875
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "signal",
+          "shape": 7,
+          "type": "SIGNAL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGNAL",
+          "type": "SIGNAL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GroupExecutorSingle"
+      },
+      "widgets_values": [
+        "解压文件",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "type": "FileClassifier",
+      "pos": [
+        802.2864990234375,
+        183.29031372070312
+      ],
+      "size": [
+        270,
+        282
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "file_path",
+          "type": "STRING",
+          "widget": {
+            "name": "file_path"
+          },
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "pdf_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "docx_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "vido_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "audio_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FileClassifier"
+      },
+      "widgets_values": [
+        "",
+        "vido_path",
+        "audio_path",
+        "image_path",
+        "pdf_path",
+        "docx_path",
+        true
+      ]
+    },
+    {
+      "id": 6,
+      "type": "UNZIP",
+      "pos": [
+        149.1754150390625,
+        211.6234893798828
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "path",
+          "type": "STRING",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNZIP"
+      },
+      "widgets_values": [
+        "input_path",
+        1,
+        "log_path"
+      ]
+    }
+  ],
+  "links": [
+    [
+      2,
+      5,
+      0,
+      3,
+      0,
+      "SIGNAL"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "SIGNAL"
+    ],
+    [
+      4,
+      6,
+      0,
+      1,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "文件分类",
+      "bounding": [
+        677.28662109375,
+        19.512405395507812,
+        516,
+        520
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "解压文件",
+      "bounding": [
+        92.84181213378906,
+        27.84571075439453,
+        434.22216796875,
+        474.6666259765625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9090909090909091,
+      "offset": [
+        785.9050541761405,
+        447.72855791003366
+      ]
+    },
+    "frontendVersion": "1.23.4"
+  },
+  "version": 0.4
+}

@@ -1,0 +1,514 @@
+{
+  "id": "c5a75dd9-2032-441f-adb1-54218d3dd77c",
+  "revision": 0,
+  "last_node_id": 13,
+  "last_link_id": 17,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "GroupExecutorSingle",
+      "pos": [
+        1747.691650390625,
+        272.99517822265625
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "signal",
+          "name": "signal",
+          "shape": 7,
+          "type": "SIGNAL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "SIGNAL",
+          "name": "SIGNAL",
+          "type": "SIGNAL",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GroupExecutorSingle",
+        "aux_id": "LAOGOU-666/Comfyui-LG_GroupExecutor",
+        "ver": "be6e4b127f3a668881a1be3b353bb272ccd033eb"
+      },
+      "widgets_values": [
+        "docx_pipeline",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "type": "DocxToMarkdown",
+      "pos": [
+        1380.51513671875,
+        749.7528076171875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "md_path",
+          "type": "STRING",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DocxToMarkdown"
+      },
+      "widgets_values": [
+        "../example/test_out/classify/docx",
+        "../example/test_out/pdf/docx_to_md"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "MarkdownInfoNode",
+      "pos": [
+        1722.8609619140625,
+        712.47900390625
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "md_root",
+          "name": "md_root",
+          "type": "STRING",
+          "widget": {
+            "name": "md_root"
+          },
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "label": "jsonl_path",
+          "name": "jsonl_path",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MarkdownInfoNode"
+      },
+      "widgets_values": [
+        "./markdown",
+        "../example/test_out/docx/jsonl",
+        "../example/test_out/docx/jsonl/md_info.jsonl",
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "MultiPruner",
+      "pos": [
+        2044.496337890625,
+        691.478759765625
+      ],
+      "size": [
+        310.765625,
+        418
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "input_dir",
+          "name": "input_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "input_dir"
+          },
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "label": "输出目录路径",
+          "name": "输出目录路径",
+          "type": "STRING",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultiPruner"
+      },
+      "widgets_values": [
+        "./input",
+        "../example/test_out/docx/clean",
+        1,
+        100,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 11,
+      "type": "BatchProcessDocuments_Zho",
+      "pos": [
+        2419.691162109375,
+        644.6829833984375
+      ],
+      "size": [
+        315.3755798339844,
+        226
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "input_folder",
+          "name": "input_folder",
+          "type": "STRING",
+          "widget": {
+            "name": "input_folder"
+          },
+          "link": 11
+        },
+        {
+          "name": "api_url",
+          "type": "STRING",
+          "widget": {
+            "name": "api_url"
+          },
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "label": "out_path",
+          "name": "out_path",
+          "type": "STRING",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchProcessDocuments_Zho"
+      },
+      "widgets_values": [
+        "",
+        "../example/test_out/docx/label",
+        "None",
+        "",
+        "qwen",
+        "./custom_nodes/Corpus_Cleansing_Pipeline/config",
+        true,
+        true
+      ]
+    },
+    {
+      "id": 12,
+      "type": "BatchGenerateQANode",
+      "pos": [
+        3053.691162109375,
+        686.0162963867188
+      ],
+      "size": [
+        270,
+        222
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_folder",
+          "type": "STRING",
+          "widget": {
+            "name": "input_folder"
+          },
+          "link": 15
+        },
+        {
+          "name": "api_url",
+          "type": "STRING",
+          "widget": {
+            "name": "api_url"
+          },
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "label": "qa_jsonl_path",
+          "name": "qa_jsonl_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "label": "shard_folder",
+          "name": "shard_folder",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchGenerateQANode"
+      },
+      "widgets_values": [
+        "",
+        "../example/test_out/docx/QA",
+        "None",
+        "",
+        "qwen",
+        1,
+        100
+      ]
+    },
+    {
+      "id": 13,
+      "type": "GroupExecutorSender",
+      "pos": [
+        2499.0244140625,
+        308.349609375
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "signal",
+          "type": "SIGNAL",
+          "link": 17
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "isExecuting": false,
+        "isCancelling": false,
+        "statusText": "",
+        "showStatus": false
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 9,
+      "type": "GroupExecutorSingle",
+      "pos": [
+        2087.244384765625,
+        280.0938415527344
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "signal",
+          "name": "signal",
+          "shape": 7,
+          "type": "SIGNAL",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "label": "SIGNAL",
+          "name": "SIGNAL",
+          "type": "SIGNAL",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GroupExecutorSingle",
+        "aux_id": "LAOGOU-666/Comfyui-LG_GroupExecutor",
+        "ver": "be6e4b127f3a668881a1be3b353bb272ccd033eb"
+      },
+      "widgets_values": [
+        "QA",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "type": "PromptTextEditor",
+      "pos": [
+        1531.9803466796875,
+        934.269775390625
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "append_text",
+          "type": "STRING",
+          "links": [
+            12,
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PromptTextEditor"
+      },
+      "widgets_values": [
+        "url链接"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      2,
+      3,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      7,
+      8,
+      0,
+      9,
+      0,
+      "SIGNAL"
+    ],
+    [
+      11,
+      4,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      12,
+      6,
+      0,
+      11,
+      1,
+      "STRING"
+    ],
+    [
+      15,
+      11,
+      0,
+      12,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      6,
+      0,
+      12,
+      1,
+      "STRING"
+    ],
+    [
+      17,
+      9,
+      0,
+      13,
+      0,
+      "SIGNAL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "docx_pipeline",
+      "bounding": [
+        1303.34375,
+        547.540283203125,
+        1504.126953125,
+        725.9786376953125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "QA",
+      "bounding": [
+        3009.775390625,
+        576.759033203125,
+        377.8054504394531,
+        412.4542236328125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -972.3579056628755,
+        -348.0163233695966
+      ]
+    },
+    "frontendVersion": "1.23.4"
+  },
+  "version": 0.4
+}
