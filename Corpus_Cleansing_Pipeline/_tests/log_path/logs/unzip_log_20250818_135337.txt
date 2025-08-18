@@ -1,0 +1,16 @@
+2025-08-18 13:53:37,742 - INFO - 开始解压目录: log_path (使用 1 个并行工作线程)
+2025-08-18 13:53:37,742 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input 中的 2 个压缩文件
+2025-08-18 13:53:37,742 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data_unzip
+2025-08-18 13:53:37,742 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data.zip
+2025-08-18 13:53:37,743 - INFO - 解压到路径: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data_unzip
+2025-08-18 13:53:37,767 - INFO - 解压成功: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data.zip
+2025-08-18 13:53:37,768 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data_unzip
+2025-08-18 13:53:37,768 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data.zip
+2025-08-18 13:53:37,775 - INFO - 解压到路径: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data_unzip
+2025-08-18 13:53:37,800 - INFO - 解压成功: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data.zip
+2025-08-18 13:53:37,802 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:53:37,802 - INFO - 已删除成功解压的压缩包: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/raw_input/test_data.zip
+2025-08-18 13:53:37,802 - INFO - 解压处理完成
+2025-08-18 13:53:37,802 - INFO - 成功解压并删除: 1 个文件
+2025-08-18 13:53:37,802 - INFO - 需要密码并移动: 0 个文件
+2025-08-18 13:53:37,802 - INFO - 解压失败并移动: 0 个文件

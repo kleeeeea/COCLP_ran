@@ -1,0 +1,12 @@
+2025-08-18 13:28:28,043 - INFO - 开始解压目录: log_path (使用 1 个并行工作线程)
+2025-08-18 13:28:28,043 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/ 中的 2 个压缩文件
+2025-08-18 13:28:28,043 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/test_data_unzip
+2025-08-18 13:28:28,043 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/test_data.zip
+2025-08-18 13:28:28,052 - INFO - 解压到路径: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/test_data_unzip
+2025-08-18 13:28:28,087 - INFO - 解压成功: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/test_data.zip
+2025-08-18 13:28:28,090 - INFO - 已移动解压失败的压缩包: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/test_data_unzip -> log_path/unzip_failed/test_data_unzip
+2025-08-18 13:28:28,091 - INFO - 已删除成功解压的压缩包: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/test_data.zip
+2025-08-18 13:28:28,091 - INFO - 解压处理完成
+2025-08-18 13:28:28,091 - INFO - 成功解压并删除: 1 个文件
+2025-08-18 13:28:28,091 - INFO - 需要密码并移动: 0 个文件
+2025-08-18 13:28:28,091 - INFO - 解压失败并移动: 1 个文件

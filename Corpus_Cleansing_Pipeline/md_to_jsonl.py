@@ -160,6 +160,7 @@ class MarkdownInfoNode:
         ]
 
         results = []
+        self._process_single_md( md_files[0], md_root, original_root)
         with ThreadPoolExecutor(max_workers=threads) as pool:
             futures = {
                 pool.submit(self._process_single_md, p, md_root, original_root): p

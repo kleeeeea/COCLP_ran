@@ -1,0 +1,20 @@
+2025-08-18 13:30:56,243 - INFO - 开始解压目录: log_path (使用 1 个并行工作线程)
+2025-08-18 13:30:56,243 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:30:56,244 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:30:56,253 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:30:56,254 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:30:56,255 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:30:56,255 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:30:56,256 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:30:56,257 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:30:56,258 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:30:56,259 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:30:56,260 - INFO - 已移动解压失败的压缩包: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed/test_data_unzip -> log_path/unzip_failed/test_data_unzip
+2025-08-18 13:30:56,260 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:30:56,260 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:30:56,260 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:30:56,260 - INFO - 已移动解压失败的压缩包: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed/test_data_unzip -> log_path/unzip_failed/test_data_unzip
+2025-08-18 13:30:56,260 - INFO - 解压处理完成
+2025-08-18 13:30:56,261 - INFO - 成功解压并删除: 0 个文件
+2025-08-18 13:30:56,261 - INFO - 需要密码并移动: 0 个文件
+2025-08-18 13:30:56,261 - INFO - 解压失败并移动: 2 个文件

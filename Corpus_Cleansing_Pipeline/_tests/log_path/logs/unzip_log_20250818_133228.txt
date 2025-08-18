@@ -1,0 +1,35 @@
+2025-08-18 13:32:28,194 - INFO - 开始解压目录: log_path (使用 1 个并行工作线程)
+2025-08-18 13:32:28,194 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:32:28,195 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:51,340 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed/test_data_unzip 中的 1 个压缩文件
+2025-08-18 13:32:51,341 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed/test_data_unzip/test_data_unzip
+2025-08-18 13:32:55,978 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/image_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:32:55,979 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/image_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:55,982 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:32:55,982 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:55,985 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/audio_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:32:55,985 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/audio_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:55,988 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:32:55,988 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:55,990 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/docx_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:32:55,991 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/docx_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:55,993 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:32:55,993 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:55,995 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed 中的 1 个压缩文件
+2025-08-18 13:32:55,995 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:55,996 - INFO - 开始并行处理目录 /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed/test_data_unzip 中的 1 个压缩文件
+2025-08-18 13:32:55,997 - INFO - 正在解压文件: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed/test_data_unzip/test_data_unzip
+2025-08-18 13:32:56,124 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,124 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/pdf_path/log_path/unzip_failed/test_data_unzip/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,124 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/image_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,124 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/image_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,124 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/audio_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,125 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/audio_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,125 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/docx_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,125 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/docx_path/log_path/unzip_failed/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,125 - INFO - 已移动解压失败的压缩包: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed/test_data_unzip -> log_path/unzip_failed/test_data_unzip
+2025-08-18 13:32:56,125 - ERROR - 移动压缩包失败: /Users/l/git_repos/ComfyUI/custom_nodes/Corpus_Cleansing_Pipeline/_tests/log_path/unzip_failed/test_data_unzip/test_data_unzip, 错误: Destination path 'log_path/unzip_failed/test_data_unzip/test_data_unzip' already exists
+2025-08-18 13:32:56,125 - INFO - 解压处理完成
+2025-08-18 13:32:56,125 - INFO - 成功解压并删除: 0 个文件
+2025-08-18 13:32:56,125 - INFO - 需要密码并移动: 0 个文件
+2025-08-18 13:32:56,125 - INFO - 解压失败并移动: 1 个文件

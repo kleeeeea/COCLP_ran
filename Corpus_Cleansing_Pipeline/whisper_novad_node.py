@@ -31,7 +31,7 @@ class WhisperNoVADTranscribeNode:
     FUNCTION = "run"
     OUTPUT_NODE = True
     CATEGORY = "MY_NODES/Whisper"
-    
+
     def _hash_path_to_id(self, file_path: str) -> str:
         """Stable SHA‑256 hash so each Markdown file gets a unique ID."""
         return hashlib.sha256(file_path.encode("utf-8")).hexdigest()
@@ -46,7 +46,7 @@ class WhisperNoVADTranscribeNode:
             raise RuntimeError(f"Failed to load audio: {e}")
 
     def run(self, input_dir, model_path, output_dir, language, beam_size, device, output_filename):
-        model = WhisperModel(model_path, device=device, compute_type="float16")
+        model = WhisperModel(model_path, device=device, compute_type="int8")
         valid_exts = [".wav", ".mp3", ".m4a", ".flac", ".aac"]
         os.makedirs(output_dir, exist_ok=True)
 
@@ -71,9 +71,9 @@ class WhisperNoVADTranscribeNode:
                         word_timestamps=False,
                         condition_on_previous_text=True
                     )
-                    
+
                     id=self._hash_path_to_id(file_path)
-                    
+
                     full_text = cc.convert("".join([seg.text for seg in segments]).strip())
                     json.dump({"id":id, "audio_path":file_path, "audio_id": file_id, "text": full_text}, out_f, ensure_ascii=False)
                     out_f.write("\n")

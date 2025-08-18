@@ -158,22 +158,24 @@ def unzip_single_file(file, root_path):
                 sum2 = 0
                 for file_info in zip_ref.infolist():
                     sum1 += 1
-                    for encoding in ['gbk', 'utf-8', 'cp437']:
+
+                    for encoding in ['utf-8', 'gbk', 'cp437']:
                         try:
                             file_info.filename = file_info.filename.encode('cp437').decode(encoding)
                             zip_ref.extract(file_info, extract_path)
                             sum2 += 1
                             break
-                        except (UnicodeDecodeError, UnicodeEncodeError) as e:
+                        except (UnicodeDecodeError, UnicodeEncodeError, Exception) as e:
                             # print(e)
-                            try:
-                                file_info.filename = file_info.filename.encode('utf-8').decode(encoding)
-                                zip_ref.extract(file_info, extract_path)
-                                sum2 += 1
-                                break
-                            except (UnicodeDecodeError, UnicodeEncodeError) as e:
-                                # print(e)
-                                continue
+                            if isinstance(e, (UnicodeDecodeError, UnicodeEncodeError)):
+                                try:
+                                    file_info.filename = file_info.filename.encode('utf-8').decode(encoding)
+                                    zip_ref.extract(file_info, extract_path)
+                                    sum2 += 1
+                                    break
+                                except (UnicodeDecodeError, UnicodeEncodeError) as e:
+                                    # print(e)
+                                    continue
                 if sum1 == sum2:
                     logging.info(f"解压成功: {file}")
                     write_processed(file, root_path)
@@ -322,6 +324,7 @@ def unzip(path, root_path, max_workers=4):
         logging.info(f"开始并行处理目录 {path} 中的 {len(compress_files)} 个压缩文件")
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             # 提交所有任务到线程池
+            {unzip_single_file( file, root_path): file for file in compress_files}
             future_to_file = {executor.submit(unzip_single_file, file, root_path): file for file in compress_files}
 
             # 使用tqdm显示进度

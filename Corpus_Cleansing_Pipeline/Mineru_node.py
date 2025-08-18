@@ -309,8 +309,8 @@ class Mineru_ocr:
     def mineru(self, read_path, out_path, backend, type):
         pdf_files_dir=read_path
         output_dir=out_path
-       
-       
+
+
         logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s [%(levelname)s] %(message)s',
@@ -319,41 +319,43 @@ class Mineru_ocr:
         encoding='utf-8'
         )
         logger = logging.getLogger(__name__)
-        
-        
+
+
         """如果您由于网络问题无法下载模型，可以设置环境变量MINERU_MODEL_SOURCE为modelscope使用免代理仓库下载模型"""
         os.environ['MINERU_MODEL_SOURCE'] = "modelscope"
         # os.environ['MINERU_MODEL_SOURCE']='local'
         # os.environ['MODELSCOPE_CACHE'] = "/model_space"
-        
-                
+
+
         if type == "pdf":
             extensions = [".pdf"]
             doc_path_list = []
             dir_path=Path(pdf_files_dir)
             for ext in extensions:
                 doc_path_list.extend(dir_path.rglob(f"*{ext}"))
-           
+
             # 校验PDF列表
             filtered_pdfs = validate_and_filter_pdfs(doc_path_list)
-            
-            parse_doc(filtered_pdfs, output_dir, backend=backend)
-                
+            if not len(os.listdir(output_dir)) >= len(filtered_pdfs):
+
+                parse_doc(filtered_pdfs, output_dir, backend=backend)
+
         elif type == "image":
             extensions = [".png", ".jpeg", ".jpg"]
             doc_path_list = []
             dir_path=Path(pdf_files_dir)
             for ext in extensions:
                 doc_path_list.extend(dir_path.rglob(f"*{ext}"))
-            parse_doc(doc_path_list, output_dir, backend=backend)
+            if not len(os.listdir(output_dir)) >= len(doc_path_list):
+                parse_doc(doc_path_list, output_dir, backend=backend)
         else:
             return("类型错误")
-        
-        
+
+
 
         """Use pipeline mode if your environment does not support VLM"""
-        
-    
+
+
         # parse_doc(doc_path_list, output_dir, backend=backend)
 
 

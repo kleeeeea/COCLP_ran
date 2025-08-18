@@ -295,6 +295,7 @@ class BatchProcessDocumentsNode:
                 with open(input_path, "r", encoding="utf-8") as f_in:
                     records = [json.loads(line) for line in f_in]
 
+                self._process_file_records(records, dispatcher, output_path)
                 future = executor.submit(self._process_file_records, records, dispatcher, output_path)
                 future_to_path[future] = input_path
 
