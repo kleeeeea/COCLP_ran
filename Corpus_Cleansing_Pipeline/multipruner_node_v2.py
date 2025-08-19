@@ -277,9 +277,9 @@ def process_all_files(input_dir, output_dir, pruner, num_processes=None,
     if num_processes is None:
         num_processes = multiprocessing.cpu_count()
     from os.path import exists
-    if exists(output_dir) and len(os.listdir(output_dir)) >= len(jsonl_files):
-        print(f"输出目录 {output_dir} 已存在且文件数量大于等于输入文件数量，无需处理")
-        return
+    # if exists(output_dir) and len(os.listdir(output_dir)) >= len(jsonl_files):
+    #     print(f"输出目录 {output_dir} 已存在且文件数量大于等于输入文件数量，无需处理")
+    #     return
     # Use tqdm for progress tracking in the main process
     with multiprocessing.Pool(processes=num_processes) as pool:
         process_func = partial(process_single_file, pruner=pruner, output_path=output_dir, enable_markdown=enable_markdown, enable_email=enable_email, enable_link=enable_link,
